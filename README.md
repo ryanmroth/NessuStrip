@@ -9,7 +9,7 @@ Strip hosts and report items from those unwieldy Nessus XML files.
 
 ## Usage
 
-Usage:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NessuStrip host <ip> INPUT-FILE [OUTPUT-FILE]  
+Usage: NessuStrip host <ip> INPUT-FILE [OUTPUT-FILE]  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NessuStrip plugin <id> INPUT-FILE [OUTPUT-FILE]  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NessuStrip severity (none|low|medium|high|critical) INPUT-FILE [OUTPUT-FILE]  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NessuStrip (-h | --help)  
