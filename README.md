@@ -10,10 +10,10 @@ Strip hosts and report items from those unwieldy Nessus XML files.
 ## Usage
 
 Usage: NessuStrip host <ip> INPUT-FILE [OUTPUT-FILE]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NessuStrip plugin <id> INPUT-FILE [OUTPUT-FILE]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NessuStrip severity (none|low|medium|high|critical) INPUT-FILE [OUTPUT-FILE]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NessuStrip (-h | --help)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NessuStrip (-v | --version)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NessuStrip plugin <id> INPUT-FILE [OUTPUT-FILE]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NessuStrip severity (none|low|medium|high|critical) INPUT-FILE [OUTPUT-FILE]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NessuStrip (-h | --help)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NessuStrip (-v | --version)  
   
 * Note: Output file is optional. Defaults to 'NessuStrip-Output.nessus'  
   
