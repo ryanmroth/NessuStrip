@@ -5,7 +5,8 @@ Strip hosts and report items from those unwieldy Nessus XML files.
 ## Installation
 
 1. pip install requirements.txt
-2. ./NessuStrip -h
+2. chmod +x NessuStrip.py
+2. ./NessuStrip.py -h
 
 ## Usage
 
