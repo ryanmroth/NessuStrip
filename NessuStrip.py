@@ -4,15 +4,14 @@
 # By Ryan Roth
 
 """
-Usage:  NessuStrip [options] host <ip> INFILE
-        NessuStrip [options] plugin <id> INFILE
-        NessuStrip [options] severity (none|low|medium|high|critical) INFILE
+Usage:  NessuStrip [options] host <ip> INFILE [OUTFILE]
+        NessuStrip [options] plugin <id> INFILE [OUTFILE]
+        NessuStrip [options] severity (none|low|medium|high|critical) INFILE [OUTFILE]
         NessuStrip (-h | --help)
         NessuStrip (-v | --version)
 
 Options:
    -h, --help         Show this screen and exit
-   -o, --outfile      Output results to this file
    -v, --version      Print the NessuStrip version
 
 The following strippers are currently available :) :
@@ -101,7 +100,7 @@ def validate_ip(ip):
 # Nessus uses specific ranges for its plugin IDs
 # We can use this to validate passed ID
 def validate_plugin_id(id):
-  if 10001 <= id <= 97999 or 99000 <= id <= 699999:
+  if 10001 <= int(id) <= 97999 or 99000 <= int(id) <= 699999:
     return True
   else:
     print("%sError: The plugin ID provided is invalid."% (R))
@@ -201,7 +200,7 @@ if __name__ == '__main__':
         results = etree.tostring(strip_plugin(args['<id>'],args['INFILE']),encoding='unicode')
   # Write the output file
   # For future: do we can if its .nessus or xml?
-  if args['--outfile']:
-    write_output(args['--outfile'],results)
-  else:
-    write_output("output.nessus",results)
+    if args['OUTFILE']:
+      write_output(args['OUTFILE'],results)
+    else:
+      write_output("output.nessus",results)
