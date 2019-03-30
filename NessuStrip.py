@@ -198,8 +198,8 @@ if __name__ == '__main__':
       if key == 'plugin' and validate_plugin_id(args['<id>']):
         # Strip it
         results = etree.tostring(strip_plugin(args['<id>'],args['INFILE']),encoding='unicode')
-  # Write the output file
-  # For future: do we can if its .nessus or xml?
+    # Write the output file
+    # For future: do we can if its .nessus or xml?
     if args['OUTFILE']:
       write_output(args['OUTFILE'],results)
     else:
