@@ -1,33 +1,24 @@
 # NessuStrip
-
 Strip hosts and report items from those unwieldy Nessus XML files.
 
-## Installation
+### Installation
 
-1. pip install requirements.txt
-2. chmod +x NessuStrip.py
-2. ./NessuStrip.py -h
+NessuStrip requires [Docopt](http://docopt.org/) and [Lxml](https://lxml.de/), .
 
-## Usage
+Install the dependencies.
 
-Usage: NessuStrip host <ip> INPUT-FILE [OUTPUT-FILE]
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NessuStrip plugin <id> INPUT-FILE [OUTPUT-FILE]
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NessuStrip severity (none|low|medium|high|critical) INPUT-FILE [OUTPUT-FILE]
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NessuStrip (-h | --help)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NessuStrip (-v | --version)
+```sh
+$ cd NessuStrip
+$ pip install requirements.txt
+```
+### Todos
 
-* Note: Output file is optional. Defaults to 'NessuStrip-Output.nessus'
+ - Add additional strippers
+ - Seems to have problems with output files that include spaces
 
-Options:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-h, --help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Show this screen and exit
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-v, --version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Print the NessuStrip version
+License
+----
 
-The following strippers are currently available :) :
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;host&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove an entire host's findings by IP address
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;plugin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove findings by Nessus plugin ID
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;severity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove findings by risk rating
+MIT License
 
-## TODO
-
-1. Add additional strippers in the future
-2. Seems to have problems with output files including spaces
+**Free Software, Hell Yeah!**

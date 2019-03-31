@@ -21,7 +21,6 @@ The following strippers are currently available :) :
 """
 
 import ipaddress, os, sys
-from subprocess import call
 from docopt import docopt
 from lxml import etree
 
@@ -203,4 +202,4 @@ if __name__ == '__main__':
     if args['OUTFILE']:
       write_output(args['OUTFILE'],results)
     else:
-      write_output("output.nessus",results)
+      write_output("NessuStrip-Output.nessus",results)
