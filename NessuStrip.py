@@ -75,7 +75,7 @@ def parse_args(args):
     pass
 
 # Validate the input file provided
-# Ensure the input file exists and ends in Nessus
+# Ensure the input file exists and ends in .nessus
 # Further validation is done by XML root in the file parser def
 def validate_infile(input):
   if not os.path.isfile(input):
@@ -121,6 +121,7 @@ def parse_nessus(input):
         pass
   except OSError as errorCode:
     print("%sError: "% (R) + str(errorCode))
+    pass
 
 # Strip ReportItems by severity
 def strip_severity(severity,input):
@@ -173,6 +174,7 @@ def write_output(outfile,input):
       file.close()
   except OSError as errorCode:
     print("%sError: "% (R) + str(errorCode) + ".")
+    pass
 
 if __name__ == '__main__':
   banner()
@@ -198,7 +200,7 @@ if __name__ == '__main__':
         # Strip it
         results = etree.tostring(strip_plugin(args['<id>'],args['INFILE']),encoding='unicode')
     # Write the output file
-    # For future: do we can if its .nessus or xml?
+    # For future: do we care if its .nessus or xml?
     if args['OUTFILE']:
       write_output(args['OUTFILE'],results)
     else:
