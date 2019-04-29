@@ -26,8 +26,7 @@ $ NessuStrip (-v | --version)
 ### Todos
 
  - Add additional strippers
- - Seems to have problems with output files that include spaces
-
+ 
 ### License
 
 MIT License
